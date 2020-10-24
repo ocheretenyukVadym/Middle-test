@@ -1,0 +1,91 @@
+.createList {
+  display: flex;
+  justify-content: center;
+}
+.createList * {
+  padding: 5px;
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  height: 95vh;
+}
+.container .allBooksLists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 50%;
+}
+.container .allBooksLists .allBooks {
+  background-color: #d4d3d3;
+  width: 40%;
+  height: 80%;
+}
+.container .allBooksLists .allBooks__title {
+  text-align: center;
+  background-color: #adaaaa;
+  padding: 3%;
+}
+.container .allBooksLists .allBooks__book {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  border-bottom: 1px solid black;
+}
+.container .allBooksLists .read {
+  background-color: #d4d3d3;
+  width: 25%;
+  height: 80%;
+}
+.container .allBooksLists .read__title {
+  text-align: center;
+  background-color: #adaaaa;
+  padding: 3%;
+}
+.container .allBooksLists .read__book {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  border-bottom: 1px solid black;
+}
+.container .allBooksLists .notRead {
+  background-color: #d4d3d3;
+  width: 25%;
+  height: 80%;
+}
+.container .allBooksLists .notRead__title {
+  text-align: center;
+  background-color: #adaaaa;
+  padding: 3%;
+}
+.container .allBooksLists .notRead__book {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  border-bottom: 1px solid black;
+}
+.container .formInput {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d4d3d3;
+  width: 30%;
+  height: 50%;
+}
+.container .formInput input {
+  width: 80%;
+  height: 8%;
+}
+.container .formInput label {
+  padding: 10px;
+  background-color: #adaaaa;
+  border-radius: 20%;
+  -webkit-user-select: none;
+          user-select: none;
+}
