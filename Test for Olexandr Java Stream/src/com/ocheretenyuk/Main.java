@@ -14,15 +14,12 @@ import java.util.Stack;
 Поток "Производитель" должен ждать, пока потребитель заберёт данные и место освободится.
  */
 public class Main {
+    static Stack<Integer> stack = new Stack();
+    static Producer producer = new Producer(stack);
+    static Consumer consumer = new Consumer(stack);
 
-    public static void main(String[] args) throws InterruptedException {
-        Stack<Integer> stack = new Stack();
-
-        System.out.print("Enter stack size: ");
-        Producer producer = new Producer(stack, new Scanner(System.in).nextInt());
-        Consumer consumer = new Consumer(stack);
-
-        producer.start();
-        consumer.start();
+    public static void main(String[] args){
+        new ProducerRun(producer).start();
+        new ConsumerRun(consumer).start();
     }
 }
