@@ -1,3 +1,6 @@
+import Book from './Book';
+import BookList from './Book';
+
 const INPUT_NEW_LIST = document.getElementById("newBookList");
 const BUTTON_CREATE_LIST = document.getElementById("createNewList");
 const BOOK_LIST_DROPDOWN = document.getElementById("BookLists");
@@ -161,4 +164,29 @@ function workWithList(myBookList) {
             })
         }
     }
+}
+
+module.exports = {
+    Book,
+    finishCurrentBook,
+    getTime,
+    toString,
+    BookList,
+    nextBookToRead,
+    currentBookBeingRead,
+    lastBookRead,
+    getArrayOfAllBooks,
+    addBook,
+    call,
+    indexOfBookListSelected,
+    createNewListAction,
+    workWithList,
+    clearAllField,
+    createNewBookAction,
+    showAllBooks,
+    showBooksIsRead,
+    clickButtonRead,
+    clickButtonRead,
+    clickButtonReadtoNotRead,
+    clickButtonReadtoNotRead
 }

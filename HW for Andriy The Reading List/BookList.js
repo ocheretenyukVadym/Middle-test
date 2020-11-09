@@ -1,4 +1,4 @@
-class BookList{
+export class BookList{
 
     constructor(name){
         this.name = name;
