@@ -1,0 +1,117 @@
+~/Development/ISG_Labs/UT(master*) » jest ReadingList.spec.js                andriifrankiv@MacBook-Pro
+ FAIL  ./ReadingList.spec.js
+  The Reading List
+    Book class
+      should return object with properties title, genre, autor
+        ✓ should own property title (2 ms)
+        ✓ should own property genre (1 ms)
+        ✓ should own property autor
+      should create Book instance with passed properties
+        ✓ should has property title equals to Колобок (1 ms)
+        ✓ should has property genre equals to Окультизм (1 ms)
+        ✓ should has property autor equals to невідомий
+    BookList class
+      BookList should be able to add books and mark them as "read"
+        ✓ should have addBook method  (1 ms)
+        ✕ should have finishCurrentBook method  (3 ms)
+      Add book to the list
+        ✓ should add book to the list (1 ms)
+        ✓ should add book to the end of list
+        ✓ should be unread
+        ✓ should have have prop readDate set (1 ms)
+      Finish reading current book
+        ✕ should mark book as read
+        ✕ should set read date (1 ms)
+
+  ● The Reading List › BookList class › BookList should be able to add books and mark them as "read"  › should have finishCurrentBook method
+
+    expect(received).toHaveProperty(path)
+
+    Expected path: "finishCurrentBook"
+    Received path: []
+
+    Received value: {"allBooks": [], "bookIsRead": [], "booksIsNotRead": [], "currentBookBeingRead": [Function currentBookBeingRead], "getArrayOfAllBooks": [Function getArrayOfAllBooks], "lastBookRead": [Function lastBookRead], "name": undefined, "nextBookToRead": [Function nextBookToRead]}
+
+      104 |       for (const m of keys) {
+      105 |         it(`should have ${m} method `, () => {
+    > 106 |           expect(bookList).toHaveProperty(m);
+          |                            ^
+      107 |           expect(typeof bookList[m]).toEqual('function');
+      108 |         })
+      109 |       }
+
+      at Object.<anonymous> (ReadingList.spec.js:106:28)
+
+  ● The Reading List › BookList class › Finish reading current book › should mark book as read
+
+    TypeError: bookList.finishCurrentBook is not a function
+
+      146 |       it('should mark book as read', () => {
+      147 |         // bookList.allBooks.forEach(() => bookList.finishCurrentBook());
+    > 148 |         bookList.finishCurrentBook();
+          |                  ^
+      149 |         expect(book[READ]).toEqual(true);
+      150 |       });
+      151 |
+
+      at Object.<anonymous> (ReadingList.spec.js:148:18)
+
+  ● The Reading List › BookList class › Finish reading current book › should set read date
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: Date
+
+    Received value has no prototype
+    Received value: undefined
+
+      151 |
+      152 |       it('should set read date', () => {
+    > 153 |         expect(book[READ_DATE]).toBeInstanceOf(Date);
+          |                                 ^
+      154 |       });
+      155 |
+      156 |       afterAll(() => {
+
+      at Object.<anonymous> (ReadingList.spec.js:153:33)
+
+  console.group
+      BOOKLIST AFTER LAST TEST
+
+      at Object.<anonymous> (ReadingList.spec.js:157:17)
+
+  console.log
+      BookList {
+      name: undefined,
+      bookIsRead: [],
+      booksIsNotRead: [
+        Book {
+          title: 'Колобок',
+          genre: 'Окультизм',
+          autor: 'невідомий',
+          read: false,
+          dateWhenendRead: null
+        }
+      ],
+      allBooks: [
+        Book {
+          title: 'Колобок',
+          genre: 'Окультизм',
+          autor: 'невідомий',
+          read: false,
+          dateWhenendRead: null
+        }
+      ],
+      nextBookToRead: [Function: nextBookToRead],
+      currentBookBeingRead: [Function: currentBookBeingRead],
+      lastBookRead: [Function: lastBookRead],
+      getArrayOfAllBooks: [Function: getArrayOfAllBooks]
+    }
+
+      at Object.<anonymous> (ReadingList.spec.js:158:17)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 11 passed, 14 total
+Snapshots:   0 total
+Time:        1.069 s, estimated 2 s
+Ran all test suites matching /ReadingList.spec.js/i.
